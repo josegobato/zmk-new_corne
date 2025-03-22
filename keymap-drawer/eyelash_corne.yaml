@@ -190,7 +190,7 @@ layers:
   - RGB BRD
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&tran s'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -199,5 +199,7 @@ layers:
 combos:
 - p: [6, 7]
   k: {h: '-', s: _}
+  l: [QWERTY]
 - p: [6, 8]
   k: {t: '=', s: +}
+  l: [QWERTY]
