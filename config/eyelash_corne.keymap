@@ -66,12 +66,14 @@
         combo_minus {
             timeout-ms = <50>;
             key-positions = <6 7>;
+            layers = <0>;
             bindings = <&kp MINUS>;
         };
 
         combo_plus {
             timeout-ms = <50>;
             key-positions = <6 8>;
+            layers = <0>;
             bindings = <&kp EQUAL>;
         };
     };
@@ -122,7 +124,7 @@
                 &studio_unlock  &out OUT_USB     &out OUT_BLE    &sys_reset    &trans        &bootloader                                    &mmv MOVE_UP                     &sys_reset       &trans           &bootloader      &trans           &trans  &kp BSPC
                 &bt BT_CLR      &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                    &mmv MOVE_LEFT &mkp LCLK       &mmv MOVE_RIGHT  &trans           &trans           &trans           &trans           &trans  &trans
                 &trans          &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans  &trans
-                                                 &tran s         &trans        &trans                                                                                        &trans           &trans           &trans
+                                                 &trans          &trans        &trans                                                                                        &trans           &trans           &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
