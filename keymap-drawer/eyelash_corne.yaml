@@ -197,9 +197,9 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [7, 8]
+- p: [8, 9]
   k: {h: '-', s: _}
   l: [QWERTY]
-- p: [7, 9]
+- p: [8, 10]
   k: {t: '=', s: +}
   l: [QWERTY]
