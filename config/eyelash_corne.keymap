@@ -30,14 +30,31 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+
+        hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41>;
+            hold-trigger-on-release;
         };
+
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33>;
+            hold-trigger-on-release;
+        };
+
     };
 
     rgb_encoder: rgb_encoder {
@@ -65,14 +82,14 @@
         compatible = "zmk,combos";
         combo_minus {
             timeout-ms = <50>;
-            key-positions = <6 7>;
+            key-positions = <7 8>;
             layers = <0>;
             bindings = <&kp MINUS>;
         };
 
         combo_plus {
             timeout-ms = <50>;
-            key-positions = <6 8>;
+            key-positions = <7 9>;
             layers = <0>;
             bindings = <&kp EQUAL>;
         };
@@ -86,7 +103,7 @@
             bindings = <
 
                 &kp ESC  &kp Q       &kp W        &kp E         &kp R       &kp T                            &kp UP                &kp Y      &kp U       &kp I             &kp O          &kp P          &kp BSPC
-                &kp TAB  &hm LGUI A  &hm LCTRL S  &hm LSHIFT D  &hm LALT F  &kp G                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hm LALT J  &hm RSHIFT K      &hm RCTRL L    &hm RGUI SEMI  &kp SQT
+                &kp TAB  &hml LGUI A &hml LCTRL S &hml LSHIFT D &hml LALT F &kp G                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hmr LALT J &hmr RSHIFT K     &hmr RCTRL L   &hmr RGUI SEMI &kp SQT
                 &kp LBKT &kp Z       &kp X        &kp C         &kp V       &kp B     &kp SPACE              &kp DOWN              &kp N      &kp M       &kp COMMA         &kp DOT        &kp FSLH       &kp RBKT
                                                   &none         &mo 2       &kp SPACE                                              &kp ENTER  &mo 1   &none
 
@@ -98,10 +115,10 @@
             display-name = "NUMBER";
             bindings = <
 
-                &trans   &kp N1    &kp N2     &kp  N3     &kp N4   &kp N5                                    &mmv MOVE_UP                     &kp N6  &kp N7     &kp N8  &kp N9  &kp N0  &kp BSPC
-                &kp DEL  &kp LEFT  &kp DOWN   &kp  RIGHT  &kp UP   &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans     &trans  &trans  &trans  &kp BSLH
-                &kp INS  &kp HOME  &kp PG_UP  &kp  PG_DN  &kp END  &trans  &kp C_MUTE                        &mmv MOVE_DOWN                   &trans  &kp K_APP  &trans  &trans  &trans  &trans
-                                                          &trans   &trans  &trans                                                             &trans  &trans     &trans
+                &kp GRAVE &kp N1    &kp N2     &kp  N3     &kp N4   &kp N5                                    &mmv MOVE_UP                     &kp N6  &kp N7     &kp N8  &kp N9  &kp N0  &kp BSPC
+                &kp DEL   &kp LEFT  &kp DOWN   &kp  RIGHT  &kp UP   &trans                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans     &trans  &trans  &trans  &kp BSLH
+                &kp INS   &kp HOME  &kp PG_UP  &kp  PG_DN  &kp END  &trans  &kp C_MUTE                        &mmv MOVE_DOWN                   &trans  &kp K_APP  &trans  &trans  &trans  &trans
+                                                           &trans   &trans  &trans                                                             &trans  &trans     &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
