@@ -133,14 +133,14 @@
         combo_left_brackets {
             timeout-ms = <50>;
             key-positions = <LM1 LT2>;
-            layers = <QWERTY, RAISE>;
+            layers = <QWERTY RAISE>;
             bindings = <&kp LBKT>;
         };
 
         combo_right_brackets {
             timeout-ms = <50>;
             key-positions = <RM1 RT2>;
-            layers = <QWERTY, RAISE>;
+            layers = <QWERTY RAISE>;
             bindings = <&kp RBKT>;
         };
     };
