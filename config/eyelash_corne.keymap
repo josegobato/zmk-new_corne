@@ -67,7 +67,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
 
@@ -79,7 +79,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
 
@@ -140,7 +140,7 @@
         combo_right_brackets {
             timeout-ms = <50>;
             key-positions = <RM1 RT2>;
-            layers = <QWERTY RAISE>;
+            layers = <QWERTY, RAISE>;
             bindings = <&kp RBKT>;
         };
     };
