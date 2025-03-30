@@ -199,10 +199,10 @@ layers:
 combos:
 - p: [3, 4]
   k: {h: '-', s: _}
-  l: [QWERTY]
+  l: [QWERTY, NUMBER]
 - p: [8, 9]
   k: {t: '=', s: +}
-  l: [QWERTY]
+  l: [QWERTY, NUMBER]
 - p: [3, 17]
   k: {t: '[', s: '{'}
   l: [QWERTY, NUMBER]
