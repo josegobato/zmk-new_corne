@@ -29,7 +29,7 @@ layers:
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, h: RGUI, s: ':'}
   - {t: '''', s: '"'}
-  - {t: '[', s: '{'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Z
   - X
   - C
@@ -42,7 +42,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: ']', s: '}'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&td1'
   - $$mdi:keyboard-space$$
@@ -197,9 +197,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [8, 9]
+- p: [3, 4]
   k: {h: '-', s: _}
   l: [QWERTY]
-- p: [8, 10]
+- p: [8, 9]
   k: {t: '=', s: +}
   l: [QWERTY]
+- p: [3, 17]
+  k: {t: '[', s: '{'}
+  l: [QWERTY, NUMBER]
+- p: [9, 23]
+  k: {t: ']', s: '}'}
+  l: [QWERTY, NUMBER]
